@@ -1,4 +1,4 @@
 [submodule "EternityROM-15"]
-    path = EternityROM-15
-    url = https://github.com/syrie414/EternityROM-15.git
-    branch = fifteen
+	path = EternityROM-15
+	url = https://github.com/syrie414/EternityROM-15.git
+	branch = fifteen
