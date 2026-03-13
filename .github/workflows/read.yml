@@ -1,0 +1,19 @@
+name: Trigger Eternity Build
+
+on:
+  workflow_dispatch:
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Trigger build.yml in EternityROM-15
+        run: |
+          curl -X POST \
+          -H "Accept: application/vnd.github+json" \
+          -H "Authorization: Bearer ${{ secrets.LINKIT }}" \
+          https://api.github.com/repos/syrie414/EternityROM-15/actions/workflows/build.yml/dispatches \
+          -d '{
+            "ref": "fifteen"
+          }'
